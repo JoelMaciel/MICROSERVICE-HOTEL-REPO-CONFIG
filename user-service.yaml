@@ -37,8 +37,8 @@ management:
 
 resilience4j:
   circuitbreaker:
+    registerHealthIndicator: true
     instances:
-      registerHealthIndicator: true
       eventConsumerBufferSize: 10
       failureRateThreshold: 50
       minimumNumberOfCals: 5
