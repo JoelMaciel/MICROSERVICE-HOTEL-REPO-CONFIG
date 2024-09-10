@@ -23,17 +23,17 @@ mcsv:
   hotel:
     url: "http://HOTEL-SERVICE/api/hotels/"
 
-management:
-  health:
-    circuitbreakers:
-      enable: true
-    endpoints:
-      web:
-        exposure:
-          include: health
-    endpoint:
-      health:
-        show-details: always
+# management:
+#   health:
+#     circuitbreakers:
+#       enable: true
+#     endpoints:
+#       web:
+#         exposure:
+#           include: health
+#     endpoint:
+#       health:
+#         show-details: always
 
 # resilience4j:
 #   circuitbreaker:
