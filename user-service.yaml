@@ -42,7 +42,7 @@ resilience4j:
       ratingHotelBreaker:
         eventConsumerBufferSize: 10
         failureRateThreshold: 50
-        minimumNumberOfCalls: 5
+        minimumNumberOfCalls: 10
         automaticTransitionFromOpenToHalfOpenEnabled: true
         waitDurationInOpenState: 6s
         permittedNumberOfCallsInHalfOpenState: 3
