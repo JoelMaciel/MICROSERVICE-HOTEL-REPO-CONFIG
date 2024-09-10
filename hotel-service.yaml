@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: hotel-service
+  datasource:
+    url: jdbc:postgresql://localhost:5433/hoteldb
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+  flyway:
+    locations: classpath:db/migration, classpath:db/testdb
+
+logging:
+  level:
+    com.joelmaciel.hotel_service: TRACE
+    root: INFO
+    org.springframework.web: DEBUG
+    org.hibernate: INFO
+
