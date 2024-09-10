@@ -23,6 +23,31 @@ mcsv:
   hotel:
     url: "http://HOTEL-SERVICE/api/hotels/"
 
+management:
+  health:
+    circuitbreakers:
+      enable: true
+    endpoints:
+      web:
+        exposure:
+          include: health
+    endpoint:
+      health:
+        show-details: always
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      registerHealthIndicator: true
+      eventConsumerBufferSize: 10
+      failureRateThreshold: 50
+      minimumNumberOfCals: 5
+      automaticTransitionFromOpenToHalfOpenEnabled: true
+      waitDurationInOpenState: 6s
+      permittedNumberOfCalsInHalfOpenState: 3
+      slidingWindowSize: 10
+      slidingWindowType: COUNT_BASED
+
 logging:
   level:
     com.joelmaciel.user_service: TRACE
