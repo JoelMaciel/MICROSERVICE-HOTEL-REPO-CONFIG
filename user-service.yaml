@@ -16,9 +16,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
   flyway:
     locations: classpath:db/migration, classpath:db/testdb
-  config:
-    import: optional:configserver:http://localhost:8085
-
+    
 mcsv:
   qualification:
     url: "http://QUALIFIER-SERVICE/api/qualifications/users/"
