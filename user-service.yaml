@@ -94,12 +94,3 @@ logging:
     org.hibernate: INFO
 
 
-
-logging:
-  level:
-    com.joelmaciel.user_service: TRACE
-    root: INFO
-    org.springframework.web: DEBUG
-    org.hibernate: INFO
-
-
