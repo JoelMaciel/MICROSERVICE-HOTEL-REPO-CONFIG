@@ -39,7 +39,7 @@ resilience4j:
   circuitbreaker:
     registerHealthIndicator: true
     instances:
-      myService:
+      ratingHotelBreaker:
         eventConsumerBufferSize: 10
         failureRateThreshold: 50
         minimumNumberOfCalls: 5
