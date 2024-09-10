@@ -39,14 +39,15 @@ resilience4j:
   circuitbreaker:
     registerHealthIndicator: true
     instances:
-      eventConsumerBufferSize: 10
-      failureRateThreshold: 50
-      minimumNumberOfCals: 5
-      automaticTransitionFromOpenToHalfOpenEnabled: true
-      waitDurationInOpenState: 6s
-      permittedNumberOfCalsInHalfOpenState: 3
-      slidingWindowSize: 10
-      slidingWindowType: COUNT_BASED
+      myService:
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 6s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
 
 logging:
   level:
