@@ -35,19 +35,19 @@ management:
       health:
         show-details: always
 
-resilience4j:
-  circuitbreaker:
-    registerHealthIndicator: true
-    instances:
-      ratingHotelBreaker:
-        eventConsumerBufferSize: 10
-        failureRateThreshold: 50
-        minimumNumberOfCalls: 10
-        automaticTransitionFromOpenToHalfOpenEnabled: true
-        waitDurationInOpenState: 6s
-        permittedNumberOfCallsInHalfOpenState: 3
-        slidingWindowSize: 10
-        slidingWindowType: COUNT_BASED
+# resilience4j:
+#   circuitbreaker:
+#     registerHealthIndicator: true
+#     instances:
+#       ratingHotelBreaker:
+#         eventConsumerBufferSize: 10
+#         failureRateThreshold: 50
+#         minimumNumberOfCalls: 10
+#         automaticTransitionFromOpenToHalfOpenEnabled: true
+#         waitDurationInOpenState: 6s
+#         permittedNumberOfCallsInHalfOpenState: 3
+#         slidingWindowSize: 10
+#         slidingWindowType: COUNT_BASED
 
 logging:
   level:
